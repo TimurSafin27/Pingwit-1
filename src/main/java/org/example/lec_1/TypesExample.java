@@ -13,7 +13,7 @@ public class TypesExample {
         System.out.println(myCharUtf);
         System.out.println("㏴");
 
-        boolean myBoolean;
+        boolean myBoolean = true;
         System.out.print(myBoolean);
     }
 }
