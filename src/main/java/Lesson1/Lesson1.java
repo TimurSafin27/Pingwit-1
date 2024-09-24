@@ -51,13 +51,8 @@ public class Lesson1 {
         //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //новый вариант
 
         //Явное ожидание 10 секунд
-        WebElement element = (new WebDriverWait(driver, Duration.ofSeconds(10)) //Ожидаем появления 10 секунд
+        WebElement element1 = (new WebDriverWait(driver, Duration.ofSeconds(10)) //Ожидаем появления 10 секунд
                 .until(ExpectedConditions.presenceOfElementLocated(By.id("123"))));//presenceOfElementLocated - ожидание появления в элементе
 
-        driver.get("https://www.avito.ru/rossiya/avtomobili");
-        WebElement element = driver.findElement(By.xpath("(//a[@href='/all/lichnye_veschi'])[1]"));
-
-        String par = element.getAttribute("offsetWidth");
-        System.out.println(par);
     }
 }

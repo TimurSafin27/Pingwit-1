@@ -2,23 +2,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
-public class main {
+public class Vyvod_Teksta {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //новый вариант
 
-        driver.get("https://www.avito.ru/");
-    WebElement element = driver.findElement(By.xpath("(//a[@href='/ufa/lichnye_veschi'])[1]"));
+        driver.get("https://www.avito.ru/ufa/transport");
+        //WebElement element3 = driver.findElement(By.cssSelector("page-title-count-wQ7pG"));
+        WebElement element3 = driver.findElement(By.cssSelector("popular-rubricator-count-CX8Mx"));
 
-    String par = element.getAttribute("href");
-        System.out.println(par);
+        String par1 = element3.getText();
+        System.out.println(par1);
     }
 }
